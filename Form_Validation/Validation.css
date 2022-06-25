@@ -1,0 +1,130 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: var(--Box-Setting);
+	background-color: var(--Input-Outline-Color);
+}
+
+
+:root
+{
+	--Absolute-Position: absolute;
+	--Relative-Position: relative;
+	--Box-Setting: border-box;
+	--Input-Outline-Color: rgba(123, 94, 130, 1.0);
+	--Label-Text-Color: rgba(255, 255, 255, .8);
+	--Pointer: pointer;
+}
+
+form.Form_Container
+{
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	justify-self: center;
+	transform: translate(24vmax);
+	align-content: space-around;
+	height: 55vh;
+	margin: 12vmax;
+	border: .2rem solid var(--Label-Text-Color);
+	box-sizing: var(--Box-Setting);
+	width: 25vmax;
+	position: var(--Relative-Position);
+	border-radius: clamp(.3rem, .5rem, .9rem);
+}
+
+	form.Form_Container > div.Label_Container
+	{
+		font-family: cursive;
+		color: var(--Label-Text-Color);
+		display: flex;
+		align-self: center;
+		flex-direction: column;
+		gap: 1vmin;
+		box-sizing: var(--Box-Setting);
+		position: var(--Absolute-Position);
+		top: 10vmin;
+	}
+
+/*Input Pertama*/
+div.Label_Container > input[type="text"].Text_Input_Class
+{
+	box-sizing: var(--Box-Setting);
+	display: inline-block;
+	padding-top: .5rem;
+	padding-left: .7rem;
+	padding-bottom: .5rem;
+	border-radius: clamp(.8rem, .5rem, .9rem);
+	border: none;
+	/*border: 1px solid var(--Input-Outline-Color);*/
+}
+
+	/*Pseudo Element*/
+	div.Label_Container > input[type="text"].Text_Input_Class:focus
+	{
+		box-sizing: var(--Box-Setting);
+		outline-color: var(--Input-Outline-Color);
+	}
+	/*Bagian akhir Pseudo Element*/
+
+/*Bagian akhir input pertama*/
+
+/*Input kedua*/
+	div.Second_Label_Container
+	{
+		font-family: cursive;
+		color: var(--Label-Text-Color);
+		display: flex;
+		align-self: center;
+		flex-direction: column;
+		gap: 1vmin;
+		box-sizing: var(--Box-Setting);
+		position: var(--Absolute-Position);
+		top: 27vmin;
+	}
+
+div.Second_Label_Container > input[type="password"].Password_Input_Class
+{
+	box-sizing: var(--Box-Setting);
+	display: inline-block;
+	padding-top: .5rem;
+	padding-left: .7rem;
+	padding-bottom: .5rem;
+	border-radius: clamp(.8rem, .5rem, .9rem);
+	border: none;
+}
+	/*Pseudo Element*/
+	div.Second_Label_Container > input[type="password"].Password_Input_Class:focus
+	{
+		box-sizing: var(--Box-Setting);
+		outline-color: var(--Input-Outline-Color);
+	}
+	/*Bagian akhir Pseudo Element*/
+
+/*Bagian akhir input Kedua*/
+
+
+/*Bagian Button*/
+button[type="submit"]
+{
+	display: block;
+	transform: translate(0, 16vmin);
+	box-sizing: var(--Box-Setting);
+	padding: .7rem;
+	border: none;
+	border-radius: clamp(.8rem, .5rem, .9rem);
+	color: var(--Input-Outline-Color);
+	font-family: cursive;
+	font-weight: bold;
+	letter-spacing: .4vmin;
+	cursor: var(--Pointer);
+}
+	/*Pseudo Element*/
+	button[type="submit"]:focus
+	{
+		box-sizing: var(--Box-Setting);
+		outline-color: var(--Input-Outline-Color);
+	}
+	/*Bagian akhir pseudo element*/
+/*Bagian akhir Button*/
